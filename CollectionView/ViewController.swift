@@ -8,13 +8,53 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UICollectionViewDataSource{
 
-    override func viewDidLoad() {
+    
+   
+    @IBOutlet var RestaurantsCollectionView: UICollectionView!
+    
+    @IBOutlet var DisplayCollectionView: UICollectionView!
+    
+override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+       
+    RestaurantsCollectionView.dataSource = self
+    
     }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+     // #warning Incomplete implementation, return the number of sections
+     return 1 // number of section
+
+     }
 
 
-}
+     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+     // #warning Incomplete implementation, return the number of items
+     return 5 //number of items
 
+     }
+    
+      func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+
+        let cellId = String()
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath)
+
+        // Configure the cell
+
+        return cell
+    }
+   
+    }
+    
+
+
+
+
+// mexican, japanese, chinese, usa, canada, italian , french , breakfast, lunch,  dinner 
