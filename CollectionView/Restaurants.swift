@@ -8,6 +8,9 @@
 
 import UIKit
 
+var RestaurantsCollectionView: UICollectionView!
+
+
 var mexican = UICollectionViewCell ()
 var japanese = UICollectionViewCell ()
 var chinese = UICollectionViewCell ()
@@ -19,5 +22,7 @@ var french = UICollectionViewCell ()
 
 
 class Restaurants: UICollectionViewCell {
+    
+    
     
 }
